@@ -29,7 +29,7 @@ function Search() {
 function User() {
   return (
     <div className="flex items-center">
-      <Image src={userImg} height={67} width={67} />
+      <Image src={userImg} height={67} width={67} className="rounded-full" />
       <div className="flex flex-col gap-[10px] font-rubik w-40 ml-6">
         <h2 className="text-[22px] font-medium ">Oliver Smith</h2>
         <p>Vendor</p>
