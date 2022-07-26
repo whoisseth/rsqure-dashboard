@@ -14,7 +14,7 @@ export default function RightSidebar() {
     // overflow-y-scroll  scrollbar-hide
     <div
       className={classnames(
-        'bg-[rgba(25,59,103,0.02)] h-full min-w-[310px] w-[360px] 2xl:w-[430px] sticky top-0 border-l-2   pb-9 font-rubik',
+        'bg-[rgba(25,59,103,0.02)] h-full min-w-[310px] w-[360px] 2xl:min-w-[400px] sticky top-0 border-l-2   pb-9 font-rubik',
         scrollbar,
       )}
     >
