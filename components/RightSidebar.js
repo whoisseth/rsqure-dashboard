@@ -90,7 +90,7 @@ function Meeting() {
           <UserImage src={userImg} className="-ml-3 z-30" />
           <UserImage className="-ml-3" />
         </div>
-        <button className="flex items-center gap-3 bg-[#14A9F9] text-white px-5 py-2.5 2xl:px-6 rounded font-semibold">
+        <button className="flex items-center gap-3 bg-[#14A9F9] text-white px-5 py-2.5 2xl:px-6 rounded font-semibold shadow-[0px_4px_40px_rgba(101,144,255,0.15)]">
           <BsPlusLg className="text-sm" />
           <span>Invite</span>
         </button>

@@ -37,7 +37,12 @@ function User() {
     <div className="min-w-[310px] w-[360px] 2xl:min-w-[400px] flex   justify-center">
       <div className="flex items-center ">
         {/* <Image src={userImg} height={67} width={67} className="rounded-full" /> */}
-        <Image src={userImg} height={56} width={56} className="rounded-full" />
+        <Image
+          src={userImg}
+          height={56}
+          width={56}
+          className="rounded-full drop-shadow-[0px_25px_80px_rgba(2,140,213,0.2)]"
+        />
         <div className="flex flex-col gap-1 font-rubik  ml-6">
           <h2 className="text-[22px] font-medium ">Oliver Smith</h2>
           <p>Vendor</p>
