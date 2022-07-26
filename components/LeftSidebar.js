@@ -7,7 +7,7 @@ import Promotions_svg from './svg/Promotions_svg'
 
 export default function LeftSidebar() {
   return (
-    <div className="bg-[#FAFAFA] h-full w-[300px] 2xl:w-[348px] sticky top-0 border-r-2  overflow-y-scroll  scrollbar-hide pb-9 font-rubik">
+    <div className="bg-[#FAFAFA] h-full min-w-[290px]  w-[300px] 2xl:w-[348px] sticky top-0 border-r-2  overflow-y-scroll  scrollbar-hide pb-9 font-rubik">
       <div className="flex flex-col  pt-24 gap-1">
         <OptionLayout text="Dashboard" active>
           <MdDashboard />

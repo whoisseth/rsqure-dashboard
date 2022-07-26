@@ -8,8 +8,16 @@ import Image from 'next/image'
 import classnames from 'classnames'
 import { useState } from 'react'
 export default function RightSidebar() {
+  const scrollbar =
+    'scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full'
   return (
-    <div className="bg-[rgba(25,59,103,0.02)] h-full w-[360px] 2xl:w-[430px] sticky top-0 border-l-2  overflow-y-scroll  scrollbar-hide pb-9 font-rubik">
+    // overflow-y-scroll  scrollbar-hide
+    <div
+      className={classnames(
+        'bg-[rgba(25,59,103,0.02)] h-full min-w-[310px] w-[360px] 2xl:w-[430px] sticky top-0 border-l-2   pb-9 font-rubik',
+        scrollbar,
+      )}
+    >
       <div className="pl-9 pr-6 2xl:pr-12">
         <UpcomingMeeting />
         <TodaysMeetings />
@@ -36,7 +44,7 @@ function UpcomingMeeting() {
 }
 
 function TodaysMeetings() {
-  const [todayMeeting, SetTodayMeeting] = useState(true)
+  const [todayMeeting, SetTodayMeeting] = useState()
   return (
     <>
       <div
