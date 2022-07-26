@@ -24,7 +24,10 @@ const scrollbar =
 export default function Main() {
   return (
     <div
-      className={classnames(' w-full max-w-[calc(100vw-600px)] ', scrollbar)}
+      className={classnames(
+        ' w-full max-w-[calc(100vw-600px)] relative ',
+        scrollbar,
+      )}
     >
       <WelcomeBack />
       <CurrentProjects />
@@ -95,6 +98,7 @@ function WelcomeBack() {
           </button>
         </ProgressCard>
       </div>
+      <ScrollSuggestion className="  pr-4 2xl:hidden absolute right-0 bottom-24" />
     </div>
   )
 }
@@ -161,10 +165,7 @@ function CurrentProjects() {
         <ProjectCard />
         <ProjectCard />
       </div>
-      <div className="text-right text-xs">
-        <span className="font-medium"> SHIFT key</span>
-        <span>+ scroll through mouse.</span>
-      </div>
+      <ScrollSuggestion />
     </div>
   )
 }
@@ -246,10 +247,7 @@ function PendingInvoice() {
         <InvoiceCard />
         <InvoiceCard />
       </div>
-      <div className="text-right text-xs">
-        <span className="font-medium"> SHIFT key</span>
-        <span>+ scroll through mouse.</span>
-      </div>
+      <ScrollSuggestion />
     </div>
   )
 }
@@ -279,6 +277,15 @@ function InvoiceCard({ approved }) {
           </div>
         </div>
       </section>
+    </div>
+  )
+}
+
+function ScrollSuggestion({ className }) {
+  return (
+    <div className={classnames('text-right text-xs pt-1', className)}>
+      <span className="font-medium"> SHIFT key</span>
+      <span>+ scroll through mouse.</span>
     </div>
   )
 }
