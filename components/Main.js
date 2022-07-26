@@ -10,12 +10,10 @@ import { MdFilterAlt } from 'react-icons/md'
 import { RiCalendarEventFill } from 'react-icons/ri'
 import { TbRadar2 } from 'react-icons/tb'
 
-import React, { Children } from 'react'
-
-// import ProgressBar from '@ramonak/react-progress-bar'
-import CurveDarkBlue_svg from './svg/CurveDarkBlue_svg'
 import Progress_svg from './svg/Progress_svg'
-import Completed_svg from './svg/Completed_svg';
+import Completed_svg from './svg/Completed_svg'
+//
+import ProgressBar from '@ramonak/react-progress-bar'
 
 const scrollbarX =
   'scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 overflow-x-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full'
@@ -56,6 +54,7 @@ function PendingInvoice() {
         )}
       >
         <InvoiceCard approved />
+        <InvoiceCard />
         <InvoiceCard />
         <InvoiceCard />
       </div>
@@ -122,6 +121,7 @@ function CurrentProjects() {
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />
+        <ProjectCard />
       </div>
       <div className="text-right text-xs">
         <span className="font-medium"> SHIFT key</span>
@@ -131,7 +131,7 @@ function CurrentProjects() {
   )
 }
 
-function ProjectCard() {
+function ProjectCard({ progress = 75 }) {
   return (
     <div className="min-w-[391px] w-[391px] rounded-[10px] border px-6 py-5  ">
       <div className="space-y-1 ">
@@ -148,15 +148,24 @@ function ProjectCard() {
           <span>Deadline - 25 may</span>
         </p>
       </div>
+      <div className="flex-col  mb-5">
+        <ProgressBar
+          className="w-full mb-[10px]"
+          completed={progress}
+          bgColor="#14A9F9"
+          isLabelVisible={false}
+          height="10px"
+          borderRadius="2px"
+        />
+        <div className="flex justify-between text-xs">
+          <span className="text-[rgba(28,46,69,0.6)]">Progress bar</span>
+          <span className="font-bold text-[rgba(28,46,69,0.6)]">
+            {progress} %
+          </span>
+        </div>
+        {/* </div> */}
+      </div>
       <div className="flex items-center justify-between">
-        {/* <div className="mx-6    w-48 sm:w-80">
-          <ProgressBar
-            completed={5}
-            bgColor="#000"
-            isLabelVisible={false}
-            height="7px"
-          />
-        </div> */}
         <div className="flex items-center gap-2">
           <Image
             src={userImg}
@@ -216,7 +225,7 @@ function WelcomeBack() {
         </ProgressCard>
         <ProgressCard
           img={curvePurple}
-          color=" bg-[#AD65FF]"
+          color=" bg-[#B97AFF]"
           number="56"
           desc="Completed projects  "
         >

@@ -35,7 +35,7 @@ function User() {
   return (
     // <div className="min-w-[310px] bg-blue-100 flex   justify-center">
     <div className="min-w-[310px] w-[360px] 2xl:w-[430px] flex   justify-center">
-      <div className="flex items-center 2xl:ml-12">
+      <div className="flex items-center 2xl:ml-16">
         {/* <Image src={userImg} height={67} width={67} className="rounded-full" /> */}
         <Image src={userImg} height={56} width={56} className="rounded-full" />
         <div className="flex flex-col gap-1 font-rubik  ml-6">
