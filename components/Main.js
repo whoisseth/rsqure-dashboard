@@ -47,7 +47,7 @@ function WelcomeBack() {
       </div>
       <div
         className={classnames(
-          ' gap-[17px] flex  pb-20 px-8 2xl:px-12 ',
+          ' gap-[17px] flex  relative pb-20 px-8 2xl:px-12 ',
           'overflow-x-scroll  scrollbar-hide   ',
         )}
       >
@@ -97,8 +97,8 @@ function WelcomeBack() {
             <span>Completed</span>
           </button>
         </ProgressCard>
+        <ScrollSuggestion className="  pr-4 2xl:hidden absolute right-0 bottom-14" />
       </div>
-      <ScrollSuggestion className="  pr-4 2xl:hidden absolute right-0 bottom-24" />
     </div>
   )
 }
