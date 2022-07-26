@@ -45,7 +45,7 @@ function WelcomeBack() {
       <div
         className={classnames(
           ' gap-[17px] flex  pb-20 px-8 2xl:px-12 ',
-          scrollbarX,
+          'overflow-x-scroll  scrollbar-hide   ',
         )}
       >
         <ProgressCard
